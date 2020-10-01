@@ -16,16 +16,13 @@ public class SplashActivity extends Activity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-       // setSkipPermissionRequest(true);
-      //  setWelcomePageDisallowed(true);
-
+    
         new Handler().postDelayed(this::gotoMainActivity, 3000);
 
     }
 
     private void gotoMainActivity(){
-        startActivity(new Intent(this, MainActivity.class));
-        finish();
+        
     }
 
 

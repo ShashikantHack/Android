@@ -114,7 +114,7 @@ public class MusicListAdapter
         return new GroupViewHolder(getInflater().inflate(R.layout.row_music, parent, false));
     }
 
-    @Override
+    @OverRide
     public void onBindViewHolder(@NonNull final GroupViewHolder holder, int position)
     {
         try {
@@ -137,8 +137,7 @@ public class MusicListAdapter
                             : object.albumHolder.title);
 
                     text3.setVisibility(View.GONE);
-                    textSeparator1.setVisibility(View.GONE);
-                } else {
+                    textSeparator1.setVisibility(View.GONE); else {
                     text2.setText(object.artist);
                     text3.setText(object.albumHolder.title);
                     text3.setVisibility(View.VISIBLE);
@@ -203,7 +202,7 @@ public class MusicListAdapter
                 return object.folder;
             else if (getGroupBy() == MODE_GROUP_BY_ALBUM)
                 return object.albumHolder.title;
-        }
+        
 
         return super.getSectionName(position, object);
     }
@@ -281,5 +280,4 @@ public class MusicListAdapter
         {
             return obj instanceof AlbumHolder ? ((AlbumHolder) obj).id == id : super.equals(obj);
         }
-    }
-}
+
